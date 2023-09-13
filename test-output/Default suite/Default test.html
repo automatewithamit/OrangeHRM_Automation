@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 12 23:34:45 IST 2023</td>
+<td>Started on:</td><td>Thu Sep 14 00:29:44 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7162 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5555 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -82,10 +82,10 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:159)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
-	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:30)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:39)
 	at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -122,7 +122,7 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: EdgeDriver
+Driver info: driver.version: ChromeDriver
 	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
@@ -134,10 +134,10 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:159)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
-	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:30)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:39)
 	at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -174,13 +174,13 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: EdgeDriver
+Driver info: driver.version: ChromeDriver
 	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	... 40 more
 </pre></div></td>
-<td>7</td>
+<td>5</td>
 <td>com.hrm.tests.OrangeHRMAdminTests@4803b726</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -191,17 +191,17 @@ Driver info: driver.version: EdgeDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.hrm.tests.OrangeHRMAdminTests.Test1()'><b>Test1</b><br>Test class: com.hrm.tests.OrangeHRMAdminTests</td>
+<td title='com.hrm.tests.OrangeHRMAdminTests.loginTest()'><b>loginTest</b><br>Test class: com.hrm.tests.OrangeHRMAdminTests</td>
 <td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
 Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:159)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
-	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:30)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:39)
 	at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -238,22 +238,22 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: EdgeDriver
+Driver info: driver.version: ChromeDriver
 	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	... 40 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace623131585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace623131585'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1069584108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1069584108'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
 Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:159)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
-	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:30)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.hrm.drivermanager.BrowserManager.startBrowser(BrowserManager.java:39)
 	at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -290,7 +290,7 @@ Host info: host: &apos;DESKTOP-6LGQ6RF&apos;, ip: &apos;192.168.1.8&apos;
 Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: EdgeDriver
+Driver info: driver.version: ChromeDriver
 	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.hrm.tests.OrangeHRMAdminTests">
         <methods>
-          <include name="Test1"/>
           <include name="beforeClass"/>
+          <include name="loginTest"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.hrm.tests.OrangeHRMAdminTests -->
