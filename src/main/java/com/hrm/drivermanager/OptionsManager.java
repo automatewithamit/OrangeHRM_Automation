@@ -27,6 +27,10 @@ public class OptionsManager {
 		EdgeOptions options = new EdgeOptions();
 		
 		options.addArguments("--remote-allow-origins=*");
+		
 		return options;
 	}
+	
+	
+	
 }

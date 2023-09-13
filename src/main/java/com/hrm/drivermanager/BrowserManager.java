@@ -5,7 +5,9 @@ package com.hrm.drivermanager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.hrm.helpers.PropertiesHelper;
@@ -17,23 +19,35 @@ import com.hrm.helpers.PropertiesHelper;
 public class BrowserManager {
 
 	public static WebDriver driver;
-	
+
 	OptionsManager optionsManager = new OptionsManager();
 	PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
 
 	public void startBrowser() {
-		System.out.println("Starting Browser.....");
-		String browserType = configProperty.getProperty("browserType").toLowerCase();
 
-		switch (browserType) {
-		case "edge":
+		String browserType = configProperty.getProperty("browserType").toLowerCase();
+		System.out.println("Starting Browser....." + browserType);
+		if (browserType.equals("edge")) {
+
 			driver = new EdgeDriver(optionsManager.getEdgeOptions());
-		case "chrome":
-			driver = new ChromeDriver(optionsManager.getChromeOptions());
-		default:
-			System.out.println(browserType + "  broswer Type is not available ");
+		} else {
+			// For Remote Machine Execution
+			startRemoteDriver(browserType);
 		}
+		if (browserType.equals("chrome")) {
+
+			driver = new ChromeDriver(optionsManager.getChromeOptions());
+		} else {
+			startRemoteDriver(browserType);
+		}
+
+		System.out.println(browserType + "  broswer Type is not available ");
+
 		driver.manage().window().maximize();
+	}
+
+	public void startRemoteDriver(String browserType) {
+
 	}
 
 }
