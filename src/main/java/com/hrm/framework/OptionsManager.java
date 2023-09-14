@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hrm.drivermanager;
+package com.hrm.framework;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;

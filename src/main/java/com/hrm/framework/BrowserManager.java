@@ -1,14 +1,13 @@
 /**
  * 
  */
-package com.hrm.drivermanager;
+package com.hrm.framework;
+
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.hrm.helpers.PropertiesHelper;
 
@@ -17,6 +16,8 @@ import com.hrm.helpers.PropertiesHelper;
  *
  */
 public class BrowserManager {
+	//Singleton Pattern --> There should be one and only one instance of any Object
+	
 
 	public static WebDriver driver;
 
@@ -27,6 +28,7 @@ public class BrowserManager {
 
 		String browserType = configProperty.getProperty("browserType").toLowerCase();
 		System.out.println("Starting Browser....." + browserType);
+
 		if (browserType.equals("edge")) {
 
 			driver = new EdgeDriver(optionsManager.getEdgeOptions());
@@ -44,6 +46,7 @@ public class BrowserManager {
 		System.out.println(browserType + "  broswer Type is not available ");
 
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	public void startRemoteDriver(String browserType) {

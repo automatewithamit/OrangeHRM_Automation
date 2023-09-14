@@ -8,8 +8,8 @@ import java.util.Properties;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import com.hrm.drivermanager.BrowserManager;
-import com.hrm.drivermanager.OptionsManager;
+import com.hrm.framework.BrowserManager;
+import com.hrm.framework.OptionsManager;
 import com.hrm.helpers.PropertiesHelper;
 
 public class BaseTest {
