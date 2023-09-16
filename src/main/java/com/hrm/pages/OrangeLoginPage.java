@@ -14,28 +14,29 @@ public class OrangeLoginPage {
 	// 2. Actions performed on the WebElements or any actions performed on the page
 
 	public OrangeLoginPage() {
-
+		//PageFactory.initElements(BrowserManager.driver, this.getClass());
 	}
 
-	TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
-	TextBox password = new TextBox(By.xpath("//input[@placeholder='Password']"));
-	Button loginButton = new Button(By.xpath("//button[@type='submit']"));
+//	TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
+//	TextBox password = new TextBox(By.xpath("//input[@placeholder='Password']"));
+//	Button loginButton = new Button(By.xpath("//button[@type='submit']"));
 
-//	@FindBy(xpath = "//input[@placeholder='username']")
-//	WebElement userName ;
-//
-//	@FindBy(xpath = "//input[@placeholder='password']")
-//	WebElement password;
-//
-//	@FindBy(xpath = "//button[@type='submit']")
-//	WebElement loginButton;
+	@FindBy(xpath = "//input[@placeholder='username']")
+	WebElement userName;
+
+	@FindBy(xpath = "//input[@placeholder='password']")
+	WebElement password;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	WebElement loginButton;
 
 	public OrangeDashboardPage login(String username, String pass) {
 
-		userName.setText(username);
-
-		password.setText(pass);
-
+//		userName.setText(username);
+//
+//		password.setText(pass);
+		userName.sendKeys(username);
+		password.sendKeys(pass);
 		loginButton.click();
 		System.out.println("Clicked on Login Button");
 		return new OrangeDashboardPage();

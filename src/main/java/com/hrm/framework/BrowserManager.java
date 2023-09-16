@@ -16,8 +16,7 @@ import com.hrm.helpers.PropertiesHelper;
  *
  */
 public class BrowserManager {
-	//Singleton Pattern --> There should be one and only one instance of any Object
-	
+	// Singleton Pattern --> There should be one and only one instance of any Object
 
 	public static WebDriver driver;
 

@@ -21,7 +21,12 @@ public class Button {
 		System.out.println("Clicked on Button --> " + locator );
 	}
 
-	public String getText() {
+	public String getText() {	
+		
+		
+		
+		
+		
 		WebElement element;
 	try {
 			

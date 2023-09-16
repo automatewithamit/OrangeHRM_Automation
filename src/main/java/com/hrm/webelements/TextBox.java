@@ -18,10 +18,11 @@ public class TextBox {
 	public void setText(String text) {
 		System.out.println("Setting Text ' " + text + " ' to the Text Box --> " + locator);
 		//StaleReferenceElementException -->
+		
 		ElementUtil.setText(locator, text);
 		System.out.println("Set Text ' " + text + " ' to the Text Box --> " + locator);
 	}
-
+	
 	public void clearText() {
 
 	}
