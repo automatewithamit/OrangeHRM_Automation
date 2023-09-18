@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.hrm.framework.BrowserManager;
+import com.hrm.reporting.Reporter;
 import com.hrm.webelements.*;
 
 public class OrangeLoginPage {
@@ -17,28 +18,28 @@ public class OrangeLoginPage {
 		//PageFactory.initElements(BrowserManager.driver, this.getClass());
 	}
 
-//	TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
-//	TextBox password = new TextBox(By.xpath("//input[@placeholder='Password']"));
-//	Button loginButton = new Button(By.xpath("//button[@type='submit']"));
+	TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
+	TextBox password = new TextBox(By.xpath("//input[@placeholder='Password']"));
+	Button loginButton = new Button(By.xpath("//button[@type='submit']"));
 
-	@FindBy(xpath = "//input[@placeholder='username']")
-	WebElement userName;
-
-	@FindBy(xpath = "//input[@placeholder='password']")
-	WebElement password;
-
-	@FindBy(xpath = "//button[@type='submit']")
-	WebElement loginButton;
+//	@FindBy(xpath = "//input[@placeholder='username']")
+//	WebElement userName;
+//
+//	@FindBy(xpath = "//input[@placeholder='password']")
+//	WebElement password;
+//
+//	@FindBy(xpath = "//button[@type='submit']")
+//	WebElement loginButton;
 
 	public OrangeDashboardPage login(String username, String pass) {
 
-//		userName.setText(username);
-//
-//		password.setText(pass);
-		userName.sendKeys(username);
-		password.sendKeys(pass);
+		userName.setText(username);
+
+		password.setText(pass);
+//		userName.sendKeys(username);
+//		password.sendKeys(pass);
 		loginButton.click();
-		System.out.println("Clicked on Login Button");
+		Reporter.info("Clicked on Login Button");
 		return new OrangeDashboardPage();
 	}
 

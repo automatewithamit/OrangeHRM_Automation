@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import com.hrm.helpers.PropertiesHelper;
+import com.hrm.reporting.Reporter;
 
 /**
  * @author DragonWarrior-PC
@@ -18,7 +19,7 @@ import com.hrm.helpers.PropertiesHelper;
 public class BrowserManager {
 	// Singleton Pattern --> There should be one and only one instance of any Object
 
-	public static WebDriver driver;
+	private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<WebDriver>();
 
 	OptionsManager optionsManager = new OptionsManager();
 	PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
@@ -26,30 +27,38 @@ public class BrowserManager {
 	public void startBrowser() {
 
 		String browserType = configProperty.getProperty("browserType").toLowerCase();
-		System.out.println("Starting Browser....." + browserType);
+		Reporter.info("Starting Browser....." + browserType);
 
 		if (browserType.equals("edge")) {
 
-			driver = new EdgeDriver(optionsManager.getEdgeOptions());
+			localWebDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
 		} else {
 			// For Remote Machine Execution
 			startRemoteDriver(browserType);
 		}
 		if (browserType.equals("chrome")) {
 
-			driver = new ChromeDriver(optionsManager.getChromeOptions());
+			localWebDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 		} else {
 			startRemoteDriver(browserType);
 		}
 
-		System.out.println(browserType + "  broswer Type is not available ");
+		Reporter.info(browserType + "  broswer Type is not available ");
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	public void startRemoteDriver(String browserType) {
 
+	}
+
+	public static WebDriver getDriver() {
+		return localWebDriver.get();
+	}
+
+	public static void quitBrowser() {
+		getDriver().quit();
 	}
 
 }

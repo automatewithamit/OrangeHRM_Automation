@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import com.hrm.reporting.Reporter;
+
 public class PropertiesHelper {
 
 	Properties properties = new Properties();
@@ -27,10 +29,10 @@ public class PropertiesHelper {
 			properties.load(inputStream);
 
 		} catch (FileNotFoundException e) {
-			System.out.println("File not Found");
+			Reporter.info("File not Found");
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("Error while reading the File");
+			Reporter.info("Error while reading the File");
 			e.printStackTrace();
 		}
 	}

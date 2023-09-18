@@ -9,7 +9,7 @@ import com.hrm.framework.BrowserManager;
 public class OrangeNavigationPage {
 
 	public OrangeNavigationPage() {
-		PageFactory.initElements(BrowserManager.driver, this.getClass());
+		PageFactory.initElements(BrowserManager.getDriver(), this.getClass());
 	}
 
 	@FindBy(xpath = "//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'Admin')]")

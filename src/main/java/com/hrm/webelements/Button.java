@@ -5,6 +5,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import com.hrm.framework.BrowserManager;
+import com.hrm.reporting.Reporter;
 
 public class Button {
 
@@ -15,10 +16,10 @@ public class Button {
 	}
 
 	public void click() {
-		System.out.println("Clicking on Button --> " + locator );
-		WebElement element = BrowserManager.driver.findElement(locator);
+		Reporter.info("Clicking on Button --> " + locator );
+		WebElement element = BrowserManager.getDriver().findElement(locator);
 		element.click();
-		System.out.println("Clicked on Button --> " + locator );
+		Reporter.info("Clicked on Button --> " + locator );
 	}
 
 	public String getText() {	
@@ -30,11 +31,11 @@ public class Button {
 		WebElement element;
 	try {
 			
-			element= BrowserManager.driver.findElement(locator);
+			element= BrowserManager.getDriver().findElement(locator);
 			
 		}catch(StaleElementReferenceException ex) {
 			
-			element = BrowserManager.driver.findElement(locator);
+			element = BrowserManager.getDriver().findElement(locator);
 		}
 		 
 		return element.getText();

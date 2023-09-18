@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="methods" name="Regression-Suite">
+  <test thread-count="4" parallel="methods" name="Test">
+    <classes>
+      <class name="com.hrm.tests.DashboardTests"/>
+      <class name="com.hrm.tests.OrangeHRMAdminTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Regression-Suite -->

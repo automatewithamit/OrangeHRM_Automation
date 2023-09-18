@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import com.hrm.framework.BrowserManager;
 import com.hrm.framework.ElementUtil;
+import com.hrm.reporting.Reporter;
 
 public class TextBox {
 
@@ -16,11 +17,11 @@ public class TextBox {
 	public By locator;
 
 	public void setText(String text) {
-		System.out.println("Setting Text ' " + text + " ' to the Text Box --> " + locator);
+		Reporter.info("Setting Text ' " + text + " ' to the Text Box --> " + locator);
 		//StaleReferenceElementException -->
 		
 		ElementUtil.setText(locator, text);
-		System.out.println("Set Text ' " + text + " ' to the Text Box --> " + locator);
+		Reporter.info("Set Text ' " + text + " ' to the Text Box --> " + locator);
 	}
 	
 	public void clearText() {

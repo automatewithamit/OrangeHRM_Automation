@@ -8,23 +8,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.hrm.framework.BrowserManager;
+import com.hrm.reporting.Reporter;
 
 public class OrangeDashboardPage {
 
-	List<WebElement> quickLaunchIcons = BrowserManager.driver
+	List<WebElement> quickLaunchIconNames = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='oxd-grid-3 orangehrm-quick-launch']//p"));
 
-	List<WebElement> dashboardWidgetElements = BrowserManager.driver
+	List<WebElement> dashboardWidgetElements = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='orangehrm-dashboard-widget-name']/p"));
 
 	public OrangeDashboardPage() {
 
 	}
 
-	public boolean isQuickLaunchItemsDisplayed(List<String> quickLaunchItemsList) {
-		boolean isDisplayed = true;
+	public List<String> getActualQuickLaunchItemsFromDashboard() {
+		List<String> actualQuickLaunchItems = new ArrayList<String>();
 
-		return !isDisplayed;
+		for (WebElement iconName : quickLaunchIconNames) {
+			actualQuickLaunchItems.add(iconName.getText());
+		}
+
+		return actualQuickLaunchItems;
 	}
 
 	public List<String> getActualWidgetsOnDashboard() {
@@ -41,8 +46,9 @@ public class OrangeDashboardPage {
 		boolean isEqual = true;
 		isEqual = new HashSet<>(expectedList).equals(new HashSet<>(actualList));
 		if (!isEqual) {
-			System.out.println("expected " + expectedList + "and actual List" + actualList + " are NOT SAME");
-		}
+			Reporter.info("expected " + expectedList + "and actual List" + actualList + " are NOT SAME");
+		} else
+			Reporter.info("expected " + expectedList + "and actual List" + actualList + " SAME");
 
 		return isEqual;
 

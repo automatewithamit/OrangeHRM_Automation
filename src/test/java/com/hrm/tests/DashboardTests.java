@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.hrm.pages.OrangeDashboardPage;
 import com.hrm.pages.OrangeLoginPage;
+import com.hrm.reporting.Reporter;
 
 public class DashboardTests extends BaseTest {
 
@@ -36,6 +37,7 @@ public class DashboardTests extends BaseTest {
 		// 3. Verify that Wiget Names captured from Dashboard have same expected Widgets
 		// available
 		Assert.assertEquals(areWidgetsAvailable, true, "All the Expected Widgets are not available on the Dashboard");
+		Reporter.info("All the Expected Widgets are not available on the Dashboard");
 	}
 
 }

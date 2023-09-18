@@ -18,6 +18,7 @@ public class OptionsManager {
 		
 		options.addArguments("--remote-allow-origins=*");
 		
+		
 		return options;
 	}
 	

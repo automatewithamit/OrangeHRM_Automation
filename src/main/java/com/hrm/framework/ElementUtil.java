@@ -9,23 +9,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.hrm.reporting.Reporter;
+
 /*
  * This class is a Wrapper class aroung Selenium's Basic methods like findElement ,
  *  findElements and many more.
  */
 public class ElementUtil {
 
-	static WebDriverWait wait = new WebDriverWait(BrowserManager.driver, Duration.ofSeconds(20));
+	static WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 
 	public static WebElement findElement(By locator) {
 		WebElement element;
 		try {
 
-			element = BrowserManager.driver.findElement(locator);
+			element = BrowserManager.getDriver().findElement(locator);
 
 		} catch (StaleElementReferenceException ex) {
 
-			element = BrowserManager.driver.findElement(locator);
+			element = BrowserManager.getDriver().findElement(locator);
 		}
 		return element;
 	}
@@ -36,16 +38,16 @@ public class ElementUtil {
 		WebElement element;
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-			element = BrowserManager.driver.findElement(locator);
+			element = BrowserManager.getDriver().findElement(locator);
 
 			if (element.isDisplayed() && element.isEnabled())
 				element.sendKeys(text);
 			else {
-				System.out.println("Text Box --> " + locator + "is not enable or Displayed");
+				Reporter.info("Text Box --> " + locator + "is not enable or Displayed");
 			}
 		} catch (StaleElementReferenceException e) {
-			System.out.println("Text Box --> " + locator + "incurred Stale Element Exception");
-			element = BrowserManager.driver.findElement(locator);
+			Reporter.info("Text Box --> " + locator + "incurred Stale Element Exception");
+			element = BrowserManager.getDriver().findElement(locator);
 		} catch (Exception ex) {
 
 		}
@@ -57,16 +59,16 @@ public class ElementUtil {
 		WebElement element;
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-			element = BrowserManager.driver.findElement(locator);
+			element = BrowserManager.getDriver().findElement(locator);
 
 			if (element.isDisplayed() && element.isEnabled())
 				element.click();
 			else {
-				System.out.println("WebElement --> " + locator + "is not enable or Displayed");
+				Reporter.info("WebElement --> " + locator + "is not enable or Displayed");
 			}
 		} catch (StaleElementReferenceException e) {
-			System.out.println("WebElement --> " + locator + "incurred Stale Element Exception");
-			element = BrowserManager.driver.findElement(locator);
+			Reporter.info("WebElement --> " + locator + "incurred Stale Element Exception");
+			element = BrowserManager.getDriver().findElement(locator);
 		} catch (Exception ex) {
 
 		}
