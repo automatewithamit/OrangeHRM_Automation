@@ -1,104 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="0" failed="0" skipped="2">
+<testng-results ignored="6" total="8" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-19T00:26:27 IST" name="Regression-Suite" finished-at="2023-09-19T00:26:28 IST" duration-ms="968">
+  <suite started-at="2023-09-21T01:55:59 IST" name="Regression-Suite" finished-at="2023-09-21T01:56:24 IST" duration-ms="25233">
     <groups>
     </groups>
-    <test started-at="2023-09-19T00:26:27 IST" name="Test" finished-at="2023-09-19T00:26:28 IST" duration-ms="968">
-      <class name="com.hrm.tests.OrangeHRMAdminTests">
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.OrangeHRMAdminTests@24959ca4]" started-at="2023-09-19T00:26:28 IST" name="beforeMethod" finished-at="2023-09-19T00:26:28 IST" duration-ms="887" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hrm.tests.OrangeHRMAdminTests.loginTest()]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[ScreenCapture's base64 string must not be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture's base64 string must not be null or empty
-at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:44)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:52)
-at com.hrm.reporting.Reporter.info(Reporter.java:92)
-at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:40)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="loginTest()[pri:0, instance:com.hrm.tests.OrangeHRMAdminTests@24959ca4]" started-at="2023-09-19T00:26:28 IST" name="loginTest" finished-at="2023-09-19T00:26:28 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[ScreenCapture's base64 string must not be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture's base64 string must not be null or empty
-at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:44)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:52)
-at com.hrm.reporting.Reporter.info(Reporter.java:92)
-at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:40)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.OrangeHRMAdminTests@24959ca4]" started-at="2023-09-19T00:26:28 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1695063388953" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.hrm.tests.OrangeHRMAdminTests -->
+    <test started-at="2023-09-21T01:55:59 IST" name="Test" finished-at="2023-09-21T01:56:24 IST" duration-ms="25233">
       <class name="com.hrm.tests.DashboardTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.hrm.tests.DashboardTests@503f91c3]" started-at="2023-09-19T00:26:27 IST" name="beforeSuite" finished-at="2023-09-19T00:26:27 IST" duration-ms="283" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.hrm.tests.DashboardTests@2235eaab]" started-at="2023-09-21T01:55:58 IST" name="beforeSuite" finished-at="2023-09-21T01:55:59 IST" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.DashboardTests@503f91c3]" started-at="2023-09-19T00:26:28 IST" name="beforeMethod" finished-at="2023-09-19T00:26:28 IST" duration-ms="887" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.DashboardTests@2235eaab]" started-at="2023-09-21T01:55:59 IST" name="beforeMethod" finished-at="2023-09-21T01:56:05 IST" duration-ms="6105" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -106,17 +19,23 @@ at java.base/java.lang.Thread.run(Thread.java:833)
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[ScreenCapture's base64 string must not be null or empty]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-6LGQ6RF', ip: '192.168.1.8']]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture's base64 string must not be null or empty
-at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:44)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:52)
-at com.hrm.reporting.Reporter.info(Reporter.java:92)
-at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:40)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-6LGQ6RF', ip: '192.168.1.8'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:159)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+at com.hrm.framework.BrowserManager.startBrowser(BrowserManager.java:41)
+at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,24 +55,38 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+... 27 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyAllWidgetsOnDashboardScreen()[pri:0, instance:com.hrm.tests.DashboardTests@503f91c3]" started-at="2023-09-19T00:26:28 IST" name="verifyAllWidgetsOnDashboardScreen" finished-at="2023-09-19T00:26:28 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="verifyAllWidgetsOnDashboardScreen()[pri:0, instance:com.hrm.tests.DashboardTests@2235eaab]" started-at="2023-09-21T01:56:05 IST" name="verifyAllWidgetsOnDashboardScreen" finished-at="2023-09-21T01:56:05 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[ScreenCapture's base64 string must not be null or empty]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-6LGQ6RF', ip: '192.168.1.8']]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture's base64 string must not be null or empty
-at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:44)
-at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromBase64String(MediaEntityBuilder.java:52)
-at com.hrm.reporting.Reporter.info(Reporter.java:92)
-at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:40)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-6LGQ6RF', ip: '192.168.1.8'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:159)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+at com.hrm.framework.BrowserManager.startBrowser(BrowserManager.java:41)
+at com.hrm.tests.BaseTest.beforeMethod(BaseTest.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -173,21 +106,80 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:237)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+... 27 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAllWidgetsOnDashboardScreen -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.DashboardTests@503f91c3]" started-at="2023-09-19T00:26:28 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1695063388964" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.DashboardTests@2235eaab]" started-at="2023-09-21T01:56:05 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1695241565521" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.hrm.tests.DashboardTests@503f91c3]" started-at="2023-09-19T00:26:29 IST" name="afterSuite" finished-at="2023-09-19T00:26:29 IST" duration-ms="646" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.hrm.tests.DashboardTests@2235eaab]" started-at="2023-09-21T01:56:24 IST" name="afterSuite" finished-at="2023-09-21T01:56:25 IST" duration-ms="491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.hrm.tests.DashboardTests -->
+      <class name="com.hrm.tests.AdminTests">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.AdminTests@5c86dbc5]" started-at="2023-09-21T01:55:59 IST" name="beforeMethod" finished-at="2023-09-21T01:56:19 IST" duration-ms="19967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hrm.tests.AdminTests.loginTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTest()[pri:0, instance:com.hrm.tests.AdminTests@5c86dbc5]" started-at="2023-09-21T01:56:19 IST" name="loginTest" finished-at="2023-09-21T01:56:24 IST" duration-ms="4948" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Quick Launch Icons are not Matching] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Quick Launch Icons are not Matching] but found [true]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:617)
+at com.hrm.tests.AdminTests.loginTest(AdminTests.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.AdminTests@5c86dbc5]" started-at="2023-09-21T01:56:24 IST" name="afterMethod" finished-at="2023-09-21T01:56:24 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.hrm.tests.AdminTests -->
     </test> <!-- Test -->
   </suite> <!-- Regression-Suite -->
 </testng-results>

@@ -12,15 +12,15 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.hrm.tests.DashboardTests -->
-      <class name="com.hrm.tests.OrangeHRMAdminTests">
+      <class name="com.hrm.tests.AdminTests">
         <methods>
+          <include name="loginTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="loginTest"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.hrm.tests.OrangeHRMAdminTests -->
+      </class> <!-- com.hrm.tests.AdminTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Regression-Suite] -->

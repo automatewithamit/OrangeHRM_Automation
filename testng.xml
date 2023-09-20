@@ -4,7 +4,9 @@
   <test thread-count="4" parallel="methods" name="Test">
     <classes>
       <class name="com.hrm.tests.DashboardTests"/>
-      <class name="com.hrm.tests.OrangeHRMAdminTests"/>
+      <class name="com.hrm.tests.AdminTests"/>
+      <class name="com.hrm.tests.LoginTests"/>
+      <class name="com.hrm.tests.LeaveTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Regression-Suite -->
