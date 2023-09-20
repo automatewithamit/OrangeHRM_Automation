@@ -6,8 +6,8 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrm.pages.OrangeDashboardPage;
-import com.hrm.pages.OrangeLoginPage;
+import com.hrm.pages.DashboardPage;
+import com.hrm.pages.LoginPage;
 import com.hrm.reporting.Reporter;
 
 public class DashboardTests extends BaseTest {
@@ -28,9 +28,9 @@ public class DashboardTests extends BaseTest {
 		expectedWidgets.add("Employee Distribution by Location");
 
 		// 1. Navigate to Orange HRM Dashboard Page
-		OrangeLoginPage loginPage = new OrangeLoginPage();
+		LoginPage loginPage = new LoginPage();
 		loginPage.login(username, password);
-		OrangeDashboardPage dashboardPage = new OrangeDashboardPage();
+		DashboardPage dashboardPage = new DashboardPage();
 		List<String> actualWidgetsList = dashboardPage.getActualWidgetsOnDashboard();
 		// 2. Get All the Widget Names from Dashboard
 		boolean areWidgetsAvailable = dashboardPage.verifyLists(expectedWidgets, actualWidgetsList);

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import com.hrm.framework.BrowserManager;
 import com.hrm.reporting.Reporter;
 
-public class OrangeDashboardPage {
+public class DashboardPage {
 
 	List<WebElement> quickLaunchIconNames = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='oxd-grid-3 orangehrm-quick-launch']//p"));
@@ -18,7 +18,7 @@ public class OrangeDashboardPage {
 	List<WebElement> dashboardWidgetElements = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='orangehrm-dashboard-widget-name']/p"));
 
-	public OrangeDashboardPage() {
+	public DashboardPage() {
 
 	}
 

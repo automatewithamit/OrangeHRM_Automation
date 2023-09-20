@@ -8,11 +8,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.hrm.framework.BrowserManager;
-import com.hrm.pages.OrangeDashboardPage;
-import com.hrm.pages.OrangeLoginPage;
+import com.hrm.pages.DashboardPage;
+import com.hrm.pages.LoginPage;
 import com.hrm.reporting.Reporter;
 
-public class OrangeHRMAdminTests extends BaseTest {
+public class AdminTests extends BaseTest {
 
 	@Test
 	public void loginTest() {
@@ -32,9 +32,9 @@ public class OrangeHRMAdminTests extends BaseTest {
 		// OrangeLoginPage loginPage = PageFactory.initElements(BrowserManager.driver,
 		// OrangeLoginPage.class);
 
-		OrangeLoginPage loginPage = new OrangeLoginPage();
+		LoginPage loginPage = new LoginPage();
 
-		OrangeDashboardPage dashboardPage = loginPage.login(username, password);
+		DashboardPage dashboardPage = loginPage.login(username, password);
 		List<String> actualQuickLaunchIcons = dashboardPage.getActualQuickLaunchItemsFromDashboard();
 		// Object Chaining or Constructor Chaining
 		Assert.assertEquals(dashboardPage.verifyLists(expectedQuickLaunchItems, actualQuickLaunchIcons),

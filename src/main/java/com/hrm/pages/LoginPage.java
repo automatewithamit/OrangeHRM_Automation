@@ -9,12 +9,12 @@ import com.hrm.framework.BrowserManager;
 import com.hrm.reporting.Reporter;
 import com.hrm.webelements.*;
 
-public class OrangeLoginPage {
+public class LoginPage {
 
 	// 1. WebElements of the Page
 	// 2. Actions performed on the WebElements or any actions performed on the page
 
-	public OrangeLoginPage() {
+	public LoginPage() {
 		//PageFactory.initElements(BrowserManager.driver, this.getClass());
 	}
 
@@ -31,7 +31,7 @@ public class OrangeLoginPage {
 //	@FindBy(xpath = "//button[@type='submit']")
 //	WebElement loginButton;
 
-	public OrangeDashboardPage login(String username, String pass) {
+	public DashboardPage login(String username, String pass) {
 
 		userName.setText(username);
 
@@ -40,7 +40,7 @@ public class OrangeLoginPage {
 //		password.sendKeys(pass);
 		loginButton.click();
 		Reporter.info("Clicked on Login Button");
-		return new OrangeDashboardPage();
+		return new DashboardPage();
 	}
 
 }

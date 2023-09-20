@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hrm.framework.BrowserManager;
 
-public class OrangeNavigationPage {
+public class NavigationMenuPage {
 
-	public OrangeNavigationPage() {
+	public NavigationMenuPage() {
 		PageFactory.initElements(BrowserManager.getDriver(), this.getClass());
 	}
 
