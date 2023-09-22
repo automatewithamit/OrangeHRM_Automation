@@ -29,7 +29,6 @@ public class AddEmployee extends BasePage {
 	public String addEmployee(String firstName, String lastName) {
 		Reporter.info("Adding Employee with details " + firstName + "  and " + lastName);
 		add.click();
-
 		empFirstName.setText(firstName);
 		empLastName.setText(lastName);
 		String empID = employeeId.getText();
