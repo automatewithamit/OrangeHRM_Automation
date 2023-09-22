@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hrm.tests.DashboardTests">
+      <class name="com.hrm.tests.AdminTests">
         <methods>
-          <include name="beforeClass"/>
-          <include name="verifyAllWidgetsOnDashboardScreen"/>
+          <include name="verifyUsersCreationOnAdminPage"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.hrm.tests.DashboardTests -->
+      </class> <!-- com.hrm.tests.AdminTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

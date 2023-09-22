@@ -1,5 +1,5 @@
 package com.hrm.pages;
 
-public class UsersSubMenuPage {
+public class UsersSubMenuPage extends BasePage {
 
 }

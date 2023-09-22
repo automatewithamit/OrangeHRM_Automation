@@ -29,7 +29,7 @@ public class BaseTest {
 	@BeforeSuite
 	public void beforeSuite() {
 		String projectPath = System.getProperty("user.dir");
-		extentHelper.createExtentReports(reportPath, "ExecutionReport.html");
+		extentHelper.createExtentReports(reportPath, "OrangeHRM_RegressionReport.html");
 
 	}
 

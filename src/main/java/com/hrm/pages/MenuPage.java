@@ -1,6 +1,6 @@
 package com.hrm.pages;
 
-public class MenuPage {
+public class MenuPage  extends BasePage{
 	
 	
 	public MenuPage() {

@@ -18,12 +18,37 @@ public class TextBox {
 
 	public void setText(String text) {
 		Reporter.info("Setting Text ' " + text + " ' to the Text Box --> " + locator);
-		//StaleReferenceElementException -->
-		
+
 		ElementUtil.setText(locator, text);
 		Reporter.info("Set Text ' " + text + " ' to the Text Box --> " + locator);
 	}
-	
+
+	public String setTextAutoComplete(String text) {
+		Reporter.info("Setting Text ' " + text + " ' to the Text Box --> " + locator);
+
+		ElementUtil.setText(locator, text);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		}
+		By by = By.xpath("//div[@role='option']/span[contains(.,'" + text + "')]");
+		ElementUtil.click(by);
+		String autoCompleteOption = ElementUtil.findElement(by).getText();
+		Reporter.info("Clicked on ' " + autoCompleteOption + " 'from the Auto Complete --> " + locator);
+		return autoCompleteOption;
+	}
+
+	public String getText() {
+
+		return ElementUtil.getText(locator);
+
+	}
+
+	public void click() {
+		ElementUtil.click(locator);
+
+	}
+
 	public void clearText() {
 
 	}

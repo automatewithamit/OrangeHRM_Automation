@@ -10,18 +10,21 @@ import org.openqa.selenium.WebElement;
 import com.hrm.framework.BrowserManager;
 import com.hrm.reporting.Reporter;
 
-public class DashboardPage {
+public class DashboardPage extends BasePage {
 
 	List<WebElement> quickLaunchIconNames = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='oxd-grid-3 orangehrm-quick-launch']//p"));
 
 	List<WebElement> dashboardWidgetElements = BrowserManager.getDriver()
 			.findElements(By.xpath("//div[@class='orangehrm-dashboard-widget-name']/p"));
+	
 
 	public DashboardPage() {
-
+		
 	}
-
+public NavigationMenuPage navigate() {
+	return new NavigationMenuPage();
+}
 	public List<String> getActualQuickLaunchItemsFromDashboard() {
 		List<String> actualQuickLaunchItems = new ArrayList<String>();
 
