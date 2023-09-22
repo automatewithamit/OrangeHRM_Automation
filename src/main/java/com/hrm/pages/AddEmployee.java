@@ -34,7 +34,7 @@ public class AddEmployee extends BasePage {
 		String empID = employeeId.getText();
 		save.click();
 		Reporter.info(
-				"Employee " + firstName + " " + lastName + "with Employee ID  " + empID + " got create successfully ");
+				"Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID + "' got created successfully ");
 		return empID;
 	}
 

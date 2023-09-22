@@ -8,19 +8,28 @@ import org.openqa.selenium.support.PageFactory;
 import com.hrm.framework.BrowserManager;
 import com.hrm.webelements.WebLink;
 
-public class NavigationMenuPage  extends BasePage{
+public class NavigationMenuPage extends BasePage {
 
 	public NavigationMenuPage() {
-		
+
 	}
 
-	public WebLink adminMenu = new WebLink(By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'Admin')]"));
-	public WebLink pimMenu = new WebLink(
+	WebLink adminMenu = new WebLink(By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'Admin')]"));
+	WebLink pimMenu = new WebLink(
 			By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewPimModule')]"));
 
-	public WebLink leaveModule = new WebLink(
+	WebLink leaveModule = new WebLink(
 			By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewLeaveModule')]"));
 
-	
+	public WebLink admin() {
+		return adminMenu;
+	}
 
+	public WebLink pim() {
+		return pimMenu;
+	}
+
+	public WebLink leave() {
+		return leaveModule;
+	}
 }

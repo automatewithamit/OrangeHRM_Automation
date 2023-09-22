@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="4" parallel="methods" name="Failed suite [Regression-Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="methods" name="Test1(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.hrm.tests.AdminTests">
         <methods>
           <include name="verifyUsersCreationOnAdminPage"/>
+          <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.hrm.tests.AdminTests -->
+      <class name="com.hrm.tests.DashboardTests">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="verifyQuickLaunchSectionOnDashboardPage"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="verifyAllWidgetsOnDashboardScreen"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.hrm.tests.DashboardTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Regression-Suite] -->

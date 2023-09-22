@@ -22,9 +22,10 @@ public class DashboardPage extends BasePage {
 	public DashboardPage() {
 		
 	}
-public NavigationMenuPage navigate() {
-	return new NavigationMenuPage();
-}
+
+	
+	
+	
 	public List<String> getActualQuickLaunchItemsFromDashboard() {
 		List<String> actualQuickLaunchItems = new ArrayList<String>();
 

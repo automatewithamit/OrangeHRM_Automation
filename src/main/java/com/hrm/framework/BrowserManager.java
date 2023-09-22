@@ -3,11 +3,16 @@
  */
 package com.hrm.framework;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.hrm.helpers.PropertiesHelper;
 import com.hrm.reporting.Reporter;
@@ -23,24 +28,29 @@ public class BrowserManager {
 
 	OptionsManager optionsManager = new OptionsManager();
 	PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
+	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 
 	public void startBrowser() {
 
 		String browserType = configProperty.getProperty("browserType").toLowerCase();
+		boolean isRemote = Boolean.parseBoolean(configProperty.getProperty("isRemote").toLowerCase());
 		Reporter.info("Starting Browser....." + browserType);
 
 		if (browserType.equals("edge")) {
-
-			localWebDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
-		} else {
-			// For Remote Machine Execution
-			startRemoteDriver(browserType);
+			if (isRemote) {
+				startRemoteDriver(browserType);
+			} else {
+				localWebDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+			}
 		}
-		if (browserType.equals("chrome")) {
 
-			localWebDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
-		} else {
-			startRemoteDriver(browserType);
+		if (browserType.equals("chrome")) {
+			if (isRemote) {
+				// For Remote Machine Execution
+				startRemoteDriver(browserType);
+			} else {
+				localWebDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			}
 		}
 
 		Reporter.info(browserType + "  broswer Type is not available ");
@@ -50,7 +60,20 @@ public class BrowserManager {
 	}
 
 	public void startRemoteDriver(String browserType) {
-
+		String remoteUrl = urlHelper.getProperty("hubURL");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		if (browserType.equalsIgnoreCase("chrome")) {
+			capabilities.setBrowserName("chrome");
+			Reporter.info("############TEST CASE EXECUTION STARTED ON ==> ### " + browserType);
+		} else if (browserType.equalsIgnoreCase("edge")) {
+			capabilities.setBrowserName("MicrosoftEdge");
+			Reporter.info("############TEST CASE EXECUTION STARTED ON ==> ### " + browserType);
+		}
+		try {
+			localWebDriver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
+		} catch (MalformedURLException e) {
+			Reporter.info("MalFormed Exception Occurred ");
+		}
 	}
 
 	public static WebDriver getDriver() {
@@ -60,5 +83,4 @@ public class BrowserManager {
 	public static void quitBrowser() {
 		getDriver().quit();
 	}
-
 }

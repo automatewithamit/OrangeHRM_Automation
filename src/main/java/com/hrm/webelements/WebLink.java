@@ -21,7 +21,6 @@ public class WebLink {
 
 	public <T> T click(Class<T> type) {
 		ElementUtil.click(locator);
-
 		T typeClass = null;
 		try {
 			typeClass = type.newInstance();

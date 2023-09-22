@@ -5,4 +5,8 @@ public class BasePage {
 
 	}
 
+	public NavigationMenuPage navigate() {
+		return new NavigationMenuPage();
+	}
+
 }

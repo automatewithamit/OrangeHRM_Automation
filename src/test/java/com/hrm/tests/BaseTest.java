@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
 import com.hrm.framework.BrowserManager;
@@ -31,6 +32,13 @@ public class BaseTest {
 		String projectPath = System.getProperty("user.dir");
 		extentHelper.createExtentReports(reportPath, "OrangeHRM_RegressionReport.html");
 
+	}
+
+	@Parameters("browser")
+	@BeforeTest
+	public void beforeTest(String browserType) {
+		
+		
 	}
 
 	@BeforeMethod
