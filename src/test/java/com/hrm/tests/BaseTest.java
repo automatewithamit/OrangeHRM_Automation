@@ -35,8 +35,8 @@ public class BaseTest {
 	}
 
 	@Parameters("browser")
-	@BeforeTest
-	public void beforeTest(String browserType) {
+	@BeforeTest 
+	public void beforeTest(@Optional String browserType) {
 		
 		
 	}

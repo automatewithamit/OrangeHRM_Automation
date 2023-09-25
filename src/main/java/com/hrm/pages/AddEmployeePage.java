@@ -1,13 +1,14 @@
 package com.hrm.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.hrm.reporting.Reporter;
 import com.hrm.webelements.*;
 
-public class AddEmployee extends BasePage {
+public class AddEmployeePage extends BasePage {
 
-	public AddEmployee() {
+	public AddEmployeePage() {
 
 	}
 
@@ -26,15 +27,28 @@ public class AddEmployee extends BasePage {
 	Button save = new Button(By.xpath("//button[@type='submit']"));
 	Button add = new Button(By.xpath("//button[normalize-space()='Add']"));
 
-	public String addEmployee(String firstName, String lastName) {
+	public PersonalDetailsPage createNewEmployee(String firstName, String lastName) {
+		Reporter.info("Adding Employee with details " + firstName + "  and " + lastName);
+		add.click();
+		empFirstName.setText(firstName);
+		empLastName.setText(lastName);
+		String empID = employeeId.getText();
+		PersonalDetailsPage pInfoPage = save.click(PersonalDetailsPage.class);
+		Reporter.info("Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID
+				+ "' got created successfully ");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pInfoPage.fullName.locator));
+		return pInfoPage;
+	}
+
+	public String createNewEmployee(String firstName, String lastName, boolean createLoginDetails) {
 		Reporter.info("Adding Employee with details " + firstName + "  and " + lastName);
 		add.click();
 		empFirstName.setText(firstName);
 		empLastName.setText(lastName);
 		String empID = employeeId.getText();
 		save.click();
-		Reporter.info(
-				"Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID + "' got created successfully ");
+		Reporter.info("Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID
+				+ "' got created successfully ");
 		return empID;
 	}
 

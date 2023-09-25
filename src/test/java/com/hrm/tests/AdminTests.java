@@ -27,8 +27,8 @@ public class AdminTests extends BaseTest {
 
 		DashboardPage dashboardPage = loginPage.login(username, password);
 
-		dashboardPage.navigate().admin().click(UsersPage.class).addUser("Admin", "Enabled", "Amit",
-				"test@123", "test@123");		
+		dashboardPage.navigateTo().adminModulePage().userManagement().users().addUser("Admin", "Enabled", "Amit",
+				"test@123", "test@123");
 	}
 
 }

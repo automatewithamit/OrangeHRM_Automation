@@ -21,15 +21,15 @@ public class NavigationMenuPage extends BasePage {
 	WebLink leaveModule = new WebLink(
 			By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewLeaveModule')]"));
 
-	public WebLink admin() {
-		return adminMenu;
+	public AdminModulePage adminModulePage() {
+		return adminMenu.click(AdminModulePage.class);
 	}
 
-	public WebLink pim() {
-		return pimMenu;
+	public PIMModulePage pimModule() {
+		return pimMenu.click(PIMModulePage.class);
 	}
 
-	public WebLink leave() {
-		return leaveModule;
+	public LeaveModulePage leaveModulePage() {
+		return leaveModule.click(LeaveModulePage.class);
 	}
 }

@@ -29,13 +29,13 @@
     <documentTitle>AutomateWithAmit</documentTitle>
 
     <!-- report name - displayed at top-nav -->
-    <reportName>OrangeHRM Automation Execution Report
+    <reportName>OrangeHRM Report
     
-    <![CDATA[
+    [CDATA[
         <img src ='src/test/resources/logos/awa.jpg'/>
         
         
-      ]]>
+      ]]
     
     </reportName>
 

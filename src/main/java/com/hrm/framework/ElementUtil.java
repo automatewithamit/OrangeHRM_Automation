@@ -115,4 +115,28 @@ public final class ElementUtil {
 	public static void doubleClick(By locator) {
 
 	}
+
+	public static boolean isDisplayed(By locator) {
+		WebElement element;
+		boolean isDisplayed = false;
+
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			element = BrowserManager.getDriver().findElement(locator);
+
+			if (element.isDisplayed())
+
+				isDisplayed = element.isDisplayed();
+			else {
+				Reporter.info("WebElement --> " + locator + "is not Displayed");
+			}
+		} catch (StaleElementReferenceException e) {
+			Reporter.info("WebElement --> " + locator + "incurred Stale Element Exception");
+			element = BrowserManager.getDriver().findElement(locator);
+		} catch (Exception ex) {
+			Reporter.info("Element --> " + locator + " NOT Displayed");
+		}
+		Reporter.info("Element --> " + locator + " Displayed");
+		return isDisplayed;
+	}
 }
