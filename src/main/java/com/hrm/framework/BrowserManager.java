@@ -23,7 +23,7 @@ import com.hrm.reporting.Reporter;
  */
 public class BrowserManager {
 	// Singleton Pattern --> There should be one and only one instance of any Object
-
+WebDriver driver;
 	private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<WebDriver>();
 
 	OptionsManager optionsManager = new OptionsManager();

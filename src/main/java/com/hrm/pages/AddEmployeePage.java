@@ -36,7 +36,13 @@ public class AddEmployeePage extends BasePage {
 		PersonalDetailsPage pInfoPage = save.click(PersonalDetailsPage.class);
 		Reporter.info("Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID
 				+ "' got created successfully ");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(pInfoPage.fullName.locator));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(pInfoPage.fullName.locator));
 		return pInfoPage;
 	}
 
@@ -46,6 +52,12 @@ public class AddEmployeePage extends BasePage {
 		empFirstName.setText(firstName);
 		empLastName.setText(lastName);
 		String empID = employeeId.getText();
+		
+		
+		
+		
+		
+		
 		save.click();
 		Reporter.info("Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID
 				+ "' got created successfully ");

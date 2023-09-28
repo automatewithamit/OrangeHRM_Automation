@@ -36,8 +36,7 @@ public class Button {
 	}
 
 	public void click() {
-		ElementUtil.click(locator);
-		
+		ElementUtil.click(locator);		
 	}
 
 	public String getText() {

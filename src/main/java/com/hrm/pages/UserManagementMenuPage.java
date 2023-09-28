@@ -1,6 +1,7 @@
 package com.hrm.pages;
 
 public class UserManagementMenuPage {
+	
 	UsersPage usersPage;
 
 	public UsersPage users() {

@@ -15,14 +15,13 @@ public class NavigationMenuPage extends BasePage {
 	}
 
 	WebLink adminMenu = new WebLink(By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'Admin')]"));
-	WebLink pimMenu = new WebLink(
-			By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewPimModule')]"));
+	WebLink pimMenu = new WebLink(By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewPimModule')]"));
 
-	WebLink leaveModule = new WebLink(
-			By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewLeaveModule')]"));
+	WebLink leaveModule = new WebLink(By.xpath("//ul[contains(@class,'oxd-main-menu')]//a[contains(@href,'viewLeaveModule')]"));
 
 	public AdminModulePage adminModulePage() {
-		return adminMenu.click(AdminModulePage.class);
+		AdminModulePage adminPage = adminMenu.click(AdminModulePage.class);
+		return adminPage;
 	}
 
 	public PIMModulePage pimModule() {

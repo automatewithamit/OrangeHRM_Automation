@@ -31,7 +31,6 @@ public class BaseTest {
 	public void beforeSuite() {
 		String projectPath = System.getProperty("user.dir");
 		extentHelper.createExtentReports(reportPath, "OrangeHRM_RegressionReport.html");
-
 	}
 
 	@Parameters("browser")
@@ -55,7 +54,7 @@ public class BaseTest {
 
 	@AfterMethod
 	public void afterMethod() {
-
+		Reporter.info("After Method is going to Execute...");
 		BrowserManager.quitBrowser();
 
 	}

@@ -7,9 +7,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.hrm.framework.BrowserManager;
 
 public class BasePage {
+	
 	WebDriverWait wait;
+	
 	public BasePage() {
-		wait = new WebDriverWait(BrowserManager.getDriver(),Duration.ofSeconds(20));
+		wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 	}
 
 	public NavigationMenuPage navigateTo() {

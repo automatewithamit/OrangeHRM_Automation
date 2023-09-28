@@ -17,7 +17,8 @@ public class PIM_Tests extends BaseTest {
 		String firstName = "FirstName_" + dateTime;
 		String lastName = "LastName_" + dateTime;
 		String expectedFullName = firstName + " " + lastName;
-		System.out.println("Expected : "+expectedFullName);
+		System.out.println("Expected : " + expectedFullName);
+
 		LoginPage loginPage = new LoginPage();
 
 		DashboardPage dashboardPage = loginPage.login(username, password);
@@ -26,6 +27,18 @@ public class PIM_Tests extends BaseTest {
 		String actualFullName = personalDetailsPage.getFullName();
 		System.out.println("Actual : " + actualFullName);
 		Assert.assertEquals(actualFullName, expectedFullName);
+	}
+
+	@Test
+	public void verifyEmployeeGettingDeleted() {
+
+		String username = urlHelper.getProperty("userName");
+		String password = urlHelper.getProperty("password");
+		LoginPage loginPage = new LoginPage();
+
+		DashboardPage dashboardPage = loginPage.login(username, password);
+		EmployeeListPage employeeListPage = dashboardPage.navigateTo().pimModule().employeeList().deleteEmployee();
+
 	}
 
 }
