@@ -53,6 +53,7 @@ public class DashboardPage extends BasePage {
 			Reporter.info("expected " + expectedList + "and actual List" + actualList + " are NOT SAME");
 		} else
 			Reporter.info("expected " + expectedList + "and actual List" + actualList + " SAME");
+		System.out.println("expected " + expectedList + "and actual List" + actualList + " SAME");
 
 		return isEqual;
 

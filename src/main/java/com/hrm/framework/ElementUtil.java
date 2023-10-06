@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,8 +49,13 @@ public final class ElementUtil {
 		} catch (StaleElementReferenceException e) {
 			Reporter.info("Text Box --> " + locator + "incurred Stale Element Exception");
 			element = BrowserManager.getDriver().findElement(locator);
-		} catch (Exception ex) {
-
+		} 
+		catch(NoSuchElementException e) {
+			Reporter.fail("Element Not Found and Exception Occurred --> " + e.getMessage());
+		}
+		
+		catch (Exception ex) {
+			Reporter.fail("Exception Occurred --> " + ex.getMessage());
 		}
 
 	}

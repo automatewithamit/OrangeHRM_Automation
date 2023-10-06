@@ -13,31 +13,34 @@ import org.testng.annotations.*;
 
 import com.hrm.framework.BrowserManager;
 import com.hrm.framework.OptionsManager;
+import com.hrm.helpers.ExcelHelper;
 import com.hrm.helpers.PropertiesHelper;
 import com.hrm.reporting.ExtentHelper;
 import com.hrm.reporting.Reporter;
 
 public class BaseTest {
-
+	//String projectPath = System.getProperty("user.dir");
 	BrowserManager browserManager = new BrowserManager();
 	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 	ExtentHelper extentHelper = new ExtentHelper();
+	
+	String excelFilePath ="\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx";
 
-	String dir = System.getProperty("user.dir");
+	ExcelHelper projectData = new ExcelHelper(excelFilePath);
+
 	String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-	String reportPath = dir + "//Reports//" + "Report_" + timeStamp;
+	String reportPath = "//Reports//" + "Report_" + timeStamp;
 
 	@BeforeSuite
 	public void beforeSuite() {
-		String projectPath = System.getProperty("user.dir");
+		// String projectPath = System.getProperty("user.dir");
 		extentHelper.createExtentReports(reportPath, "OrangeHRM_RegressionReport.html");
 	}
 
 	@Parameters("browser")
-	@BeforeTest 
+	@BeforeTest
 	public void beforeTest(@Optional String browserType) {
-		
-		
+
 	}
 
 	@BeforeMethod
@@ -62,6 +65,7 @@ public class BaseTest {
 	@AfterSuite
 	public void afterSuite() {
 		extentHelper.endReport();
+
 	}
 
 }

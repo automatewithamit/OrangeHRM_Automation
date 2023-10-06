@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v113.browser.Browser;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -23,27 +22,19 @@ import com.hrm.reporting.Reporter;
  * @author DragonWarrior-PC
  *
  */
-public class BrowserManager {
+public class BrowserManagerUsingExcel {
 	// Singleton Pattern --> There should be one and only one instance of any Object
-
 	WebDriver driver;
 	private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<WebDriver>();
 
 	OptionsManager optionsManager = new OptionsManager();
 	PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
-	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 	ExcelHelper projectData = new ExcelHelper("\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx");
-
+	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
+	
 	public void startBrowser() {
 
-		String browserType = "";
-
-		if (Boolean.parseBoolean(configProperty.getProperty("readBrowserFromExcel").toLowerCase())) {
-			browserType = projectData.read("QA_SmokeTestURL").get("Browser").toLowerCase();
-		} else {
-			browserType = configProperty.getProperty("browserType").toLowerCase();
-		}
-
+		String browserType = projectData.read("QA_SmokeTestURL").get("Browser").toLowerCase();
 		boolean isRemote = Boolean.parseBoolean(configProperty.getProperty("isRemote").toLowerCase());
 		Reporter.info("Starting Browser....." + browserType);
 
