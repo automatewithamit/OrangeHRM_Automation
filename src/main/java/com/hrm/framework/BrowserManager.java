@@ -34,15 +34,41 @@ public class BrowserManager {
 	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 	ExcelHelper projectData = new ExcelHelper("\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx");
 
+	public String getSheetName() {
+		String sheetName = "";
+		String environmentName = configProperty.getProperty("environmentName").toLowerCase();
+
+		switch (environmentName) {
+		case "qa":
+			sheetName = "QA";
+			break;
+		case "dev":
+			sheetName = "DEV";
+			break;
+		case "release":
+			sheetName = "RELEASE";
+			break;
+		case "prod":
+			sheetName = "PRODUCTION";
+			break;
+
+		default:
+			Reporter.info("Incorrect environment Name --> " + environmentName);
+			break;
+		}
+
+		return sheetName;
+	}
+
 	public void startBrowser() {
 
 		String browserType = "";
 
-		if (Boolean.parseBoolean(configProperty.getProperty("readBrowserFromExcel").toLowerCase())) {
-			browserType = projectData.read("QA_SmokeTestURL").get("Browser").toLowerCase();
-		} else {
-			browserType = configProperty.getProperty("browserType").toLowerCase();
-		}
+//		if (Boolean.parseBoolean(configProperty.getProperty("readBrowserFromExcel").toLowerCase())) {
+			browserType = projectData.read(getSheetName()).get("Browser").toLowerCase();
+//		} else {
+//			browserType = configProperty.getProperty("browserType").toLowerCase();
+//		}
 
 		boolean isRemote = Boolean.parseBoolean(configProperty.getProperty("isRemote").toLowerCase());
 		Reporter.info("Starting Browser....." + browserType);

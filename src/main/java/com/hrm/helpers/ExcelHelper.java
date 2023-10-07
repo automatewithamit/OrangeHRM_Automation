@@ -38,43 +38,6 @@ public class ExcelHelper {
 		}
 	}
 
-//	static XSSFWorkbook workbook = new XSSFWorkbook();
-//
-//	// Create a blank sheet
-//	static XSSFSheet sheet = workbook.createSheet("Mobile Data");
-
-//	public static void writeExcelData(Map<Integer, Object[]> data) {
-//		// This data needs to be written (Object[])
-//
-//		// Iterate over data and write to sheet
-//		Set<Integer> keyset = data.keySet();
-//		int rownum = 0;
-//		for (Integer key : keyset) {
-//			Row row = sheet.createRow(rownum++);
-//			Object[] objArr = data.get(key);
-//			int cellnum = 0;
-//			for (Object obj : objArr) {
-//				Cell cell = row.createCell(cellnum++);
-//
-//				if (obj instanceof String)
-//					cell.setCellValue((String) obj);
-//				else if (obj instanceof Integer)
-//					cell.setCellValue((Integer) obj);
-//			}
-//		}
-//		try {
-//			// Write the workbook in file system
-//			FileOutputStream out = new FileOutputStream(new File("Mobiles.xlsx"));
-//			workbook.write(out);
-//			out.close();
-//			System.out.println("Mobiles.xlsx written successfully on disk.");
-//		} catch (Exception e) {
-//
-//			System.out.println("Mobiles.xlsx Can not be written.");
-//			e.printStackTrace();
-//		}
-//	}
-
 	public Map<String, String> read(String sheetName) {
 
 		Map<String, String> dataMap = new HashMap<>();

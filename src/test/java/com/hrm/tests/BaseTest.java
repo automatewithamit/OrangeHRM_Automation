@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeClass;
@@ -19,13 +21,12 @@ import com.hrm.reporting.ExtentHelper;
 import com.hrm.reporting.Reporter;
 
 public class BaseTest {
-	//String projectPath = System.getProperty("user.dir");
+	// String projectPath = System.getProperty("user.dir");
 	BrowserManager browserManager = new BrowserManager();
 	PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 	ExtentHelper extentHelper = new ExtentHelper();
-	
-	String excelFilePath ="\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx";
 
+	String excelFilePath = "\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx";
 	ExcelHelper projectData = new ExcelHelper(excelFilePath);
 
 	String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
@@ -49,7 +50,8 @@ public class BaseTest {
 		ExtentHelper.startTest(method.getName(), "Test Description");
 		Reporter.info("This is Before Method");
 		browserManager.startBrowser();
-		String url = urlHelper.getProperty("url");
+		String url = getDataMap().get("URL");
+		// String url = urlHelper.getProperty("url");
 		BrowserManager.getDriver().get(url);
 		Reporter.info("Navigating to URL --> " + url);
 
@@ -68,4 +70,8 @@ public class BaseTest {
 
 	}
 
+	public Map<String, String> getDataMap() {
+		return projectData.read(browserManager.getSheetName());
+
+	}
 }
