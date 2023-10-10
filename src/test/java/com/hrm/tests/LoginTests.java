@@ -4,10 +4,11 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
+import com.hrm.constants.TestGroups;
 import com.hrm.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.Login })
 	public void verifyLogin() {
 //		Map<String, String> dataMap = projectData.read("QA_SmokeTestURL");
 //

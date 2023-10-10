@@ -63,8 +63,8 @@ public class LeaveTests extends BaseTest {
 	// 4. Constants --> groupname , timeout values ,
 	// 5. TestData Management --> Excel , DataBase
 	// 6. retry
-	//Data Driven Tests
-	//configure pom.xml to execute 
+	// Data Driven Tests
+	// configure pom.xml to execute
 	// 7. Test Case Execution --> Jenkins (pull the code from remote repo and the
 	// trigger the test case)
 	// 2000 --> runnning tests in parallel with 8 threads , each test case takes 1

@@ -49,9 +49,9 @@ public class ExcelHelper {
 		Row headerRow = sheet.getRow(0);
 
 		// Iterate through columns to create keys
-		for (Cell cell : headerRow) {
-			dataMap.put(cell.toString(), null);
-		}
+//		for (Cell cell : headerRow) {
+//			dataMap.put(cell.toString(), null);
+//		}
 
 		// Assume the second row contains values
 		Row valueRow = sheet.getRow(1);
@@ -59,7 +59,9 @@ public class ExcelHelper {
 		// Iterate through values and populate the map
 		int columnIndex = 0;
 		for (Cell cell : valueRow) {
+			//taking Cells value from from 1st Row
 			String columnName = headerRow.getCell(columnIndex).toString();
+			//taking cells value from 2nd Row
 			String cellValue = cell.toString();
 			dataMap.put(columnName, cellValue);
 			columnIndex++;

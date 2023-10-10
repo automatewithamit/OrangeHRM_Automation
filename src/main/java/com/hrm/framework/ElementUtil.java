@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,8 +18,6 @@ import com.hrm.reporting.Reporter;
  *  findElements and many more.
  */
 public final class ElementUtil {
-
-	static WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 
 	public static WebElement findElement(By locator) {
 		WebElement element;
@@ -38,8 +37,10 @@ public final class ElementUtil {
 		// 1. that text box should be enable and displayed
 		WebElement element;
 		try {
+			WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-			element = BrowserManager.getDriver().findElement(locator);
+			WebDriver driver = BrowserManager.getDriver();
+			element = driver.findElement(locator);
 
 			if (element.isDisplayed() && element.isEnabled())
 				element.sendKeys(text);
@@ -49,11 +50,10 @@ public final class ElementUtil {
 		} catch (StaleElementReferenceException e) {
 			Reporter.info("Text Box --> " + locator + "incurred Stale Element Exception");
 			element = BrowserManager.getDriver().findElement(locator);
-		} 
-		catch(NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			Reporter.fail("Element Not Found and Exception Occurred --> " + e.getMessage());
 		}
-		
+
 		catch (Exception ex) {
 			Reporter.fail("Exception Occurred --> " + ex.getMessage());
 		}
@@ -65,6 +65,7 @@ public final class ElementUtil {
 		WebElement element;
 		String text = "";
 		try {
+			WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			element = BrowserManager.getDriver().findElement(locator);
 
@@ -90,6 +91,7 @@ public final class ElementUtil {
 		Reporter.info("Clicking on  --> " + locator);
 
 		try {
+			WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			element = BrowserManager.getDriver().findElement(locator);
 
@@ -127,6 +129,7 @@ public final class ElementUtil {
 		boolean isDisplayed = false;
 
 		try {
+			WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			element = BrowserManager.getDriver().findElement(locator);
 

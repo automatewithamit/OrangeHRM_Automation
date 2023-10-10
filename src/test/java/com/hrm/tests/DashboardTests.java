@@ -6,13 +6,14 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.hrm.constants.TestGroups;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
 import com.hrm.reporting.Reporter;
 
 public class DashboardTests extends BaseTest {
 
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.Dashboard })
 	public void verifyAllWidgetsOnDashboardScreen() {
 
 		String username = urlHelper.getProperty("userName");
@@ -40,7 +41,7 @@ public class DashboardTests extends BaseTest {
 		Reporter.info("All the Expected Widgets are not available on the Dashboard");
 	}
 
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.Dashboard })
 	public void verifyQuickLaunchSectionOnDashboardPage() {
 		List<String> expectedQuickLaunchItems = new ArrayList<String>();
 		// Test Data can be fetched into the tests from different sources

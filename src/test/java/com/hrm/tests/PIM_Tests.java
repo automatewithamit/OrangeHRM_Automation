@@ -3,13 +3,14 @@ package com.hrm.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.hrm.constants.TestGroups;
 import com.hrm.pages.*;
 import com.hrm.pages.LoginPage;
 import com.hrm.utilities.DateTime;
 
 public class PIM_Tests extends BaseTest {
 
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.PIM })
 	public void verifyEmployeeCreation() {
 		String username = urlHelper.getProperty("userName");
 		String password = urlHelper.getProperty("password");
@@ -29,7 +30,7 @@ public class PIM_Tests extends BaseTest {
 		Assert.assertEquals(actualFullName, expectedFullName);
 	}
 
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.PIM })
 	public void verifyEmployeeGettingDeleted() {
 
 		String username = urlHelper.getProperty("userName");

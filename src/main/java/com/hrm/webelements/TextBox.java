@@ -17,10 +17,16 @@ public class TextBox {
 	public By locator;
 
 	public void setText(String text) {
-		Reporter.info("Setting Text ' " + text + " ' to the Text Box --> " + locator);
+		try {
 
-		ElementUtil.setText(locator, text);
-		Reporter.info("Set Text ' " + text + " ' to the Text Box --> " + locator);
+			Reporter.info("Setting Text ' " + text + " ' to the Text Box --> " + locator);
+			System.out.println("Setting Text ' " + text + " ' to the Text Box --> " + locator);
+			ElementUtil.setText(locator, text);
+			Reporter.info("Set Text ' " + text + " ' to the Text Box --> " + locator);
+			System.out.println("Set Text ' " + text + " ' to the Text Box --> " + locator);
+		} catch (Exception e) {
+			System.out.println("Exception Happened : " + e.getMessage());
+		}
 	}
 
 	public String setTextAutoComplete(String text) {

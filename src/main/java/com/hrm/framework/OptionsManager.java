@@ -16,8 +16,8 @@ public class OptionsManager {
 		
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("--remote-allow-origins=*");
-		
+		//options.addArguments("--remote-allow-origins=*");
+		//options.setCapability("browserVersion", "116.0.5845.111");
 		
 		return options;
 	}
@@ -27,8 +27,8 @@ public class OptionsManager {
 	public EdgeOptions getEdgeOptions() {
 		EdgeOptions options = new EdgeOptions();
 		
-		options.addArguments("--remote-allow-origins=*");
-		
+		//options.addArguments("--remote-allow-origins=*");
+		options.setCapability("browserVersion", "116.0.5845.111");
 		return options;
 	}
 	

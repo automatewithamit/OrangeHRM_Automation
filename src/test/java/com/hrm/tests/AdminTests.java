@@ -3,11 +3,11 @@ package com.hrm.tests;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.devtools.v113.page.model.NavigatedWithinDocument;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.hrm.constants.TestGroups;
 import com.hrm.framework.BrowserManager;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
@@ -17,7 +17,7 @@ import com.hrm.reporting.Reporter;
 
 public class AdminTests extends BaseTest {
 
-	@Test
+	@Test(groups = { TestGroups.Regression, TestGroups.Admin })
 	public void verifyUsersCreationOnAdminPage() {
 
 		String username = urlHelper.getProperty("userName");

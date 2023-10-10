@@ -9,26 +9,25 @@ import com.hrm.framework.BrowserManager;
 import com.hrm.reporting.Reporter;
 import com.hrm.webelements.*;
 
-public class LoginPage  extends BasePage{
+public class LoginPage extends BasePage {
 
 	// 1. WebElements of the Page
 	// 2. Actions performed on the WebElements or any actions performed on the page
 
 	public LoginPage() {
-	
+
 	}
 
 	TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
 	TextBox password = new TextBox(By.xpath("//input[@placeholder='Password']"));
 	Button loginButton = new Button(By.xpath("//button[@type='submit']"));
 
-
-
 	public DashboardPage login(String username, String pass) {
-
+		System.out.println("Going to Login with " + username + " and " + pass);
 		userName.setText(username);
 		password.setText(pass);
-		loginButton.click();		
+		loginButton.click();
+
 		return new DashboardPage();
 	}
 

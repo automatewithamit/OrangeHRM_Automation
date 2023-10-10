@@ -9,7 +9,7 @@ import com.hrm.webelements.*;
 public class AddEmployeePage extends BasePage {
 
 	public AddEmployeePage() {
-
+		// super();
 	}
 
 	DropDown userRole = new DropDown(By.xpath("//label[text()='User Role']//following::i/.."));
@@ -42,7 +42,7 @@ public class AddEmployeePage extends BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(pInfoPage.fullName.locator));
+		//wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(pInfoPage.fullName.locator));
 		return pInfoPage;
 	}
 
@@ -52,12 +52,7 @@ public class AddEmployeePage extends BasePage {
 		empFirstName.setText(firstName);
 		empLastName.setText(lastName);
 		String empID = employeeId.getText();
-		
-		
-		
-		
-		
-		
+
 		save.click();
 		Reporter.info("Employee '" + firstName + " " + lastName + "' with Employee ID  '" + empID
 				+ "' got created successfully ");
