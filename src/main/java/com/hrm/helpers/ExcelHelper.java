@@ -13,6 +13,7 @@ import java.util.Set;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -59,9 +60,9 @@ public class ExcelHelper {
 		// Iterate through values and populate the map
 		int columnIndex = 0;
 		for (Cell cell : valueRow) {
-			//taking Cells value from from 1st Row
+			// taking Cells value from from 1st Row
 			String columnName = headerRow.getCell(columnIndex).toString();
-			//taking cells value from 2nd Row
+			// taking cells value from 2nd Row
 			String cellValue = cell.toString();
 			dataMap.put(columnName, cellValue);
 			columnIndex++;
@@ -74,4 +75,62 @@ public class ExcelHelper {
 		return dataMap;
 	}
 
+	public Object[][] readExcelData(String sheetName) {
+		Object[][] data = null;
+
+		Sheet sheet = workbook.getSheet(sheetName);
+
+		int rowCount = sheet.getLastRowNum();
+		int colCount = sheet.getRow(0).getLastCellNum();
+
+		// Initialize numRowsWithData to 0
+		int numRowsWithData = 0;
+
+		for (int i = 1; i <= rowCount; i++) {
+			Row row = sheet.getRow(i);
+
+			// Check if the row has data (non-null cells)
+			boolean hasData = false;
+			for (int j = 0; j < colCount; j++) {
+				Cell cell = row.getCell(j);
+				if (cell != null) {
+					hasData = true;
+					break;
+				}
+			}
+
+			if (hasData) {
+				numRowsWithData++;
+			} else {
+				break; // Exit the loop when a row without data is encountered
+			}
+		}
+
+		data = new Object[numRowsWithData][colCount];
+
+		for (int i = 1; i <= numRowsWithData; i++) {
+			Row row = sheet.getRow(i);
+
+			for (int j = 0; j < colCount; j++) {
+				Cell cell = row.getCell(j);
+
+				// Check if cell is null before accessing its properties
+				if (cell != null) {
+					if (cell.getCellType() == CellType.STRING) {
+						data[i - 1][j] = cell.getStringCellValue();
+					} else if (cell.getCellType() == CellType.NUMERIC) {
+						data[i - 1][j] = cell.getNumericCellValue();
+					} else if (cell.getCellType() == CellType.BOOLEAN) {
+						data[i - 1][j] = cell.getBooleanCellValue();
+					}
+					// Add additional conditions for other cell types as needed
+				} else {
+					// Handle the case where the cell is null (e.g., set a default value)
+					data[i - 1][j] = "N/A";
+				}
+			}
+		}
+
+		return data;
+	}
 }
