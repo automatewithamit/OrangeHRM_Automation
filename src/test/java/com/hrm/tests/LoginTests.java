@@ -20,6 +20,7 @@ public class LoginTests extends BaseTest {
 //		String password = "admin123";
 		LoginPage loginPage = new LoginPage();
 		loginPage.login(username, password);
+		
 
 	}
 
