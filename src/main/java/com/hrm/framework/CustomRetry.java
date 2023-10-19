@@ -13,7 +13,7 @@ public class CustomRetry implements IRetryAnalyzer {
 
 	public boolean retry(ITestResult result) {
 		PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
-		String retryLimit = configProperty.getProperty("defaultRetryCount");
+		String retryLimit = configProperty.getProperty("maxRetryCount");
 		// String retryLimit =
 		// Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("retry");
 		System.out.println("Retyr Count --> " + retryLimit);

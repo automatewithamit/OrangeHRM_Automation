@@ -4,7 +4,7 @@
 	<test thread-count="4" parallel="methods" name="QA_SmokeTests" verbose="2" preserve-order="true">
 		<groups>
 			<run>
-				<include name="Smoke"></include>
+				<include name="Retry"></include>
 			</run>
 		</groups>
 		

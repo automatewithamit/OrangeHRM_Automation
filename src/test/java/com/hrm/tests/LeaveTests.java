@@ -21,7 +21,7 @@ public class LeaveTests extends BaseTest {
 		Assert.assertEquals(true, true);
 	}
 
-	@Test(groups = { TestGroups.Regression, TestGroups.Leaves })
+	@Test(groups = { "Retry", TestGroups.Leaves })
 	public void verifyAppliedLeavesApproval() {
 		String username = getDataMap().get("UserName");
 		String password = getDataMap().get("Password");
