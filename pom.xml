@@ -27,8 +27,8 @@
 
 					<configuration>
 						<suiteXmlFiles>
-							<!-- <suiteXmlFile>testngRunner_QA_Regression.xml</suiteXmlFile>-->
-							<suiteXmlFile>testngRunner_QA_Smoke.xml</suiteXmlFile>
+							 <suiteXmlFile>testngRunner_QA_Regression.xml</suiteXmlFile>
+							
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

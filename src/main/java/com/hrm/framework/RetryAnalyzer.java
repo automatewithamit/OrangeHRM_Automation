@@ -6,7 +6,7 @@ import org.testng.Reporter;
 
 import com.hrm.helpers.PropertiesHelper;
 
-public class CustomRetry implements IRetryAnalyzer {
+public class RetryAnalyzer implements IRetryAnalyzer {
 
 	int counter = 0;
 	// int retryLimit = 3;
@@ -16,7 +16,7 @@ public class CustomRetry implements IRetryAnalyzer {
 		String retryLimit = configProperty.getProperty("maxRetryCount");
 		// String retryLimit =
 		// Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("retry");
-		System.out.println("Retyr Count --> " + retryLimit);
+		System.out.println("Retry Count --> " + retryLimit);
 
 		if (counter < Integer.valueOf(retryLimit)) {
 			counter++;

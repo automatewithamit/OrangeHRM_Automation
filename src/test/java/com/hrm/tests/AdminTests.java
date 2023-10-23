@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.hrm.constants.TestGroups;
 import com.hrm.framework.BrowserManager;
-import com.hrm.framework.CustomRetry;
+import com.hrm.framework.RetryAnalyzer;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
 import com.hrm.pages.NavigationMenuPage;
@@ -18,7 +18,7 @@ import com.hrm.reporting.Reporter;
 
 public class AdminTests extends BaseTest {
 
-	@Test(groups = { TestGroups.Regression, TestGroups.Admin }, retryAnalyzer = CustomRetry.class)
+	@Test(groups = { TestGroups.Regression, TestGroups.Admin })
 	public void verifyUsersCreationOnAdminPage() {
 
 		String username = urlHelper.getProperty("userName");
