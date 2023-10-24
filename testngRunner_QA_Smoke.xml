@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" parallel="methods" name="Smoke-Suite">
 <listeners>
-        <listener class-name="com.hrm.listeners.Retry"/>
+        <listener class-name="com.hrm.framework.listeners.Retry"/>
   </listeners>
 	<test thread-count="4" parallel="methods" name="QA_SmokeTests" verbose="2" preserve-order="true">
 		<groups>
