@@ -7,13 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Optional;
 
 import com.hrm.framework.BrowserManager;
-import com.hrm.framework.ElementUtil;
 import com.hrm.reporting.Reporter;
 import com.hrm.webelements.Button;
 import com.hrm.webelements.DropDown;
-import com.hrm.webelements.RadioButton;
 import com.hrm.webelements.TextBox;
-import com.hrm.webelements.Toggle;
 
 public class EmployeeListPage {
 

@@ -27,8 +27,8 @@
 
 					<configuration>
 						<suiteXmlFiles>
-							 <suiteXmlFile>testngRunner_QA_Regression.xml</suiteXmlFile>
-							
+							<suiteXmlFile>testngRunner_QA_Regression.xml</suiteXmlFile>
+
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
@@ -57,7 +57,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.7.0</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency> <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
 		<dependency>
 			<groupId>io.cucumber</groupId>

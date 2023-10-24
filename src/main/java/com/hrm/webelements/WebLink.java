@@ -3,17 +3,13 @@ package com.hrm.webelements;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.hrm.framework.BrowserManager;
 import com.hrm.framework.ElementUtil;
-import com.hrm.pages.BasePage;
 import com.hrm.reporting.Reporter;
 import com.hrm.utilities.TimeDelay;
 
-import bsh.org.objectweb.asm.Type;
-import lombok.SneakyThrows;
 
 public class WebLink {
 	WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(TimeDelay.TimeOut20Secs));

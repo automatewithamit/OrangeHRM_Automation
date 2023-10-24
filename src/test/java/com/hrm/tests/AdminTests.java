@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.hrm.constants.TestGroups;
 import com.hrm.framework.BrowserManager;
-import com.hrm.framework.RetryAnalyzer;
+import com.hrm.listeners.RetryAnalyzer;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
 import com.hrm.pages.NavigationMenuPage;
