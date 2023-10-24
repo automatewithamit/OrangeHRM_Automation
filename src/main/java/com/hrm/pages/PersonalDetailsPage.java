@@ -3,7 +3,7 @@ package com.hrm.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.hrm.webelements.Label;
+import com.hrm.framework.webelements.Label;
 
 public class PersonalDetailsPage extends BasePage {
 

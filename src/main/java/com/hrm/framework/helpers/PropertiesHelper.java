@@ -1,11 +1,11 @@
-package com.hrm.helpers;
+package com.hrm.framework.helpers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.reporting.Reporter;
 
 public class PropertiesHelper {
 

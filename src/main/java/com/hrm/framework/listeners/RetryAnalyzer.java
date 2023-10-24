@@ -1,10 +1,10 @@
-package com.hrm.listeners;
+package com.hrm.framework.listeners;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-import com.hrm.helpers.PropertiesHelper;
+import com.hrm.framework.helpers.PropertiesHelper;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 

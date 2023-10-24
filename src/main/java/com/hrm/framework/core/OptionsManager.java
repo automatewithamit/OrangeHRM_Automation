@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hrm.framework;
+package com.hrm.framework.core;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;

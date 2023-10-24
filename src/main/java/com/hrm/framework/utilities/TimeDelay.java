@@ -1,4 +1,4 @@
-package com.hrm.utilities;
+package com.hrm.framework.utilities;
 
 public class TimeDelay {
 

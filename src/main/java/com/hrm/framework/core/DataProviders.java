@@ -1,8 +1,8 @@
-package com.hrm.framework;
+package com.hrm.framework.core;
 
 import org.testng.annotations.DataProvider;
 
-import com.hrm.helpers.ExcelHelper;
+import com.hrm.framework.helpers.ExcelHelper;
 
 public class DataProviders {
 

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.reporting.Reporter;
-import com.hrm.webelements.*;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.reporting.Reporter;
+import com.hrm.framework.webelements.*;
 
 public class LoginPage extends BasePage {
 

@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Optional;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.reporting.Reporter;
-import com.hrm.webelements.Button;
-import com.hrm.webelements.DropDown;
-import com.hrm.webelements.TextBox;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.reporting.Reporter;
+import com.hrm.framework.webelements.Button;
+import com.hrm.framework.webelements.DropDown;
+import com.hrm.framework.webelements.TextBox;
 
 public class EmployeeListPage {
 

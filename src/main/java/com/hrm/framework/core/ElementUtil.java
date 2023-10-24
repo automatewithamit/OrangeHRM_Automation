@@ -1,4 +1,4 @@
-package com.hrm.framework;
+package com.hrm.framework.core;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.reporting.Reporter;
 
 /*
  * This class is a Wrapper class aroung Selenium's Basic methods like findElement ,

@@ -7,8 +7,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.reporting.Reporter;
 
 public class DashboardPage extends BasePage {
 

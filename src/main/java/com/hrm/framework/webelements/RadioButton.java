@@ -1,9 +1,9 @@
-package com.hrm.webelements;
+package com.hrm.framework.webelements;
 
 
 import org.openqa.selenium.By;
 
-import com.hrm.framework.ElementUtil;
+import com.hrm.framework.core.ElementUtil;
 
 public class RadioButton {
 	public By locator;

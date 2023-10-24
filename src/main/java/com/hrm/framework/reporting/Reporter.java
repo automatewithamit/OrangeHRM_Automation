@@ -1,4 +1,4 @@
-package com.hrm.reporting;
+package com.hrm.framework.reporting;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,7 +17,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.hrm.framework.BrowserManager;
+import com.hrm.framework.core.BrowserManager;
 
 public class Reporter implements ITestListener {
 

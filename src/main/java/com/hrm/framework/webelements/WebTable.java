@@ -1,4 +1,4 @@
-package com.hrm.webelements;
+package com.hrm.framework.webelements;
 
 import java.util.List;
 

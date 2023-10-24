@@ -5,8 +5,8 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrm.constants.TestGroups;
-import com.hrm.helpers.ExcelHelper;
+import com.hrm.framework.constants.TestGroups;
+import com.hrm.framework.helpers.ExcelHelper;
 import com.hrm.pages.LoginPage;
 
 public class LeaveTests extends BaseTest {

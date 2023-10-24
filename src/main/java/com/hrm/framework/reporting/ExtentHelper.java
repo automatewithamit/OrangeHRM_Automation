@@ -1,4 +1,4 @@
-package com.hrm.reporting;
+package com.hrm.framework.reporting;
 
 import java.io.File;
 import java.io.IOException;

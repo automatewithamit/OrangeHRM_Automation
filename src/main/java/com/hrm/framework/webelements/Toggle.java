@@ -1,11 +1,11 @@
-package com.hrm.webelements;
+package com.hrm.framework.webelements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.framework.ElementUtil;
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.core.ElementUtil;
+import com.hrm.framework.reporting.Reporter;
 
 public class Toggle {
 	public Toggle(By locator) {

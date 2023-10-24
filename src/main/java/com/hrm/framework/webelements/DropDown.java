@@ -1,12 +1,12 @@
-package com.hrm.webelements;
+package com.hrm.framework.webelements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.ByChained;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.reporting.Reporter;
 
 public class DropDown {
 

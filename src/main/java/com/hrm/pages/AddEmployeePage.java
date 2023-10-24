@@ -3,8 +3,8 @@ package com.hrm.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.hrm.reporting.Reporter;
-import com.hrm.webelements.*;
+import com.hrm.framework.reporting.Reporter;
+import com.hrm.framework.webelements.*;
 
 public class AddEmployeePage extends BasePage {
 

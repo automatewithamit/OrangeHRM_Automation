@@ -1,4 +1,4 @@
-package com.hrm.utilities;
+package com.hrm.framework.utilities;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

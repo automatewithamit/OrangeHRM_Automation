@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hrm.helpers;
+package com.hrm.framework.helpers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,10 +14,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.hrm.framework.OptionsManager;
-import com.hrm.helpers.ExcelHelper;
-import com.hrm.helpers.PropertiesHelper;
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.core.OptionsManager;
+import com.hrm.framework.helpers.ExcelHelper;
+import com.hrm.framework.helpers.PropertiesHelper;
+import com.hrm.framework.reporting.Reporter;
 
 /**
  * @author DragonWarrior-PC

@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrm.constants.TestGroups;
-import com.hrm.framework.BrowserManager;
-import com.hrm.listeners.RetryAnalyzer;
+import com.hrm.framework.constants.TestGroups;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.listeners.RetryAnalyzer;
+import com.hrm.framework.reporting.Reporter;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
 import com.hrm.pages.NavigationMenuPage;
 import com.hrm.pages.UsersPage;
-import com.hrm.reporting.Reporter;
 
 public class AdminTests extends BaseTest {
 

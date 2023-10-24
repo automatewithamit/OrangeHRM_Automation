@@ -4,7 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hrm.framework.BrowserManager;
+import com.hrm.framework.core.BrowserManager;
 
 public class BasePage {
 	

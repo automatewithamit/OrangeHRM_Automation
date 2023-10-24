@@ -1,4 +1,4 @@
-package com.hrm.helpers;
+package com.hrm.framework.helpers;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.reporting.Reporter;
 
 public class ExcelHelper {
 	FileInputStream fileInputStream;

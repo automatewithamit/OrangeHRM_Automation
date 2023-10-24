@@ -4,12 +4,12 @@ import java.util.Map;
 
 import org.testng.annotations.Test;
 
-import com.hrm.constants.TestGroups;
+import com.hrm.framework.constants.TestGroups;
 import com.hrm.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
 	@Test(groups = { TestGroups.Regression,
-			TestGroups.Login }, dataProvider = "excelData", dataProviderClass = com.hrm.framework.DataProviders.class)
+			TestGroups.Login }, dataProvider = "excelData", dataProviderClass = com.hrm.framework.core.DataProviders.class)
 	public void verifyLogin(String testID, String scenarioID, String username, String password, String message) {
 		// Map<String, String> dataMap = projectData.read("QA_SmokeTestURL");
 

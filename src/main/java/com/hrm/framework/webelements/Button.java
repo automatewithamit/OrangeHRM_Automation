@@ -1,4 +1,4 @@
-package com.hrm.webelements;
+package com.hrm.framework.webelements;
 
 import java.time.Duration;
 
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.framework.ElementUtil;
-import com.hrm.reporting.Reporter;
-import com.hrm.utilities.TimeDelay;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.core.ElementUtil;
+import com.hrm.framework.reporting.Reporter;
+import com.hrm.framework.utilities.TimeDelay;
 
 public class Button {
 	WebDriverWait wait = new WebDriverWait(BrowserManager.getDriver(), Duration.ofSeconds(TimeDelay.TimeOut20Secs));

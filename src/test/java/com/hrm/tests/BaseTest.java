@@ -13,12 +13,12 @@ import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
-import com.hrm.framework.BrowserManager;
-import com.hrm.framework.OptionsManager;
-import com.hrm.helpers.ExcelHelper;
-import com.hrm.helpers.PropertiesHelper;
-import com.hrm.reporting.ExtentHelper;
-import com.hrm.reporting.Reporter;
+import com.hrm.framework.core.BrowserManager;
+import com.hrm.framework.core.OptionsManager;
+import com.hrm.framework.helpers.ExcelHelper;
+import com.hrm.framework.helpers.PropertiesHelper;
+import com.hrm.framework.reporting.ExtentHelper;
+import com.hrm.framework.reporting.Reporter;
 
 public class BaseTest {
 	// String projectPath = System.getProperty("user.dir");

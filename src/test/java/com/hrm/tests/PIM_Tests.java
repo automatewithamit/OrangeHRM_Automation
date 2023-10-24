@@ -3,10 +3,10 @@ package com.hrm.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrm.constants.TestGroups;
+import com.hrm.framework.constants.TestGroups;
+import com.hrm.framework.utilities.DateTime;
 import com.hrm.pages.*;
 import com.hrm.pages.LoginPage;
-import com.hrm.utilities.DateTime;
 
 public class PIM_Tests extends BaseTest {
 

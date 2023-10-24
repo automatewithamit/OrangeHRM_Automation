@@ -2,8 +2,8 @@ package com.hrm.pages;
 
 import org.openqa.selenium.By;
 
-import com.hrm.reporting.Reporter;
-import com.hrm.webelements.*;
+import com.hrm.framework.reporting.Reporter;
+import com.hrm.framework.webelements.*;
 
 public class UsersPage extends BasePage {
 

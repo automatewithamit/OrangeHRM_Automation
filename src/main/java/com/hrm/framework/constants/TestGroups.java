@@ -1,4 +1,4 @@
-package com.hrm.constants;
+package com.hrm.framework.constants;
 
 public final class TestGroups {
 
