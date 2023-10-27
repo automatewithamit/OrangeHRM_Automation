@@ -5,6 +5,7 @@ import java.util.Map;
 import org.testng.annotations.Test;
 
 import com.hrm.framework.constants.TestGroups;
+import com.hrm.framework.helpers.DBHelper;
 import com.hrm.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
@@ -20,7 +21,23 @@ public class LoginTests extends BaseTest {
 //		String password = "admin123";
 		LoginPage loginPage = new LoginPage();
 		loginPage.login(username, password);
-		
+
+	}
+
+	@Test(groups = { TestGroups.Regression, TestGroups.Login, TestGroups.DB })
+	public void verifyLoginUsingDB() {
+		// Map<String, String> dataMap = projectData.read("QA_SmokeTestURL");
+
+		// String username = dataMap.get("UserName");
+		// String password = dataMap.get("Password");
+
+//		String username = "Admin";
+//		String password = "admin123";
+		DBHelper db = new DBHelper();
+		String username = db.readLoginTable().get("username");
+		String password = db.readLoginTable().get("password");
+		LoginPage loginPage = new LoginPage();
+		loginPage.login(username, password);
 
 	}
 

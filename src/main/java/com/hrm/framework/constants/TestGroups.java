@@ -9,4 +9,5 @@ public final class TestGroups {
 	public static final String Dashboard = "Dashboard";
 	public static final String Login = "Login";
 	public static final String PIM = "PIM";
+	public static final String DB = "DB";
 }
