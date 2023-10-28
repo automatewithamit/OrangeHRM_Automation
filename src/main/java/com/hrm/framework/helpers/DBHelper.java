@@ -8,14 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DBHelper {
-
+	PropertiesHelper dbConfigProperties = new PropertiesHelper("//resources//db-config.properties");
 	// JDBC driver name and database URL
-	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:3306/awa_orangehrm";
-
-	// Database credentials
-	static final String USER = "root";
-	static final String PASS = "password";
+//	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+//	static final String DB_URL = "jdbc:mysql://localhost:3306/awa_orangehrm";
+//
+//	// Database credentials
+//	static final String USER = "root";
+//	static final String PASS = "password";
 
 	@SuppressWarnings("finally")
 	public Map<String, String> readLoginTable() {
@@ -25,10 +25,10 @@ public class DBHelper {
 
 		try {
 			// Register JDBC driver
-			Class.forName(JDBC_DRIVER);
+			Class.forName(getJDBC_DRIVER());
 
 			// Open a connection
-			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			conn = DriverManager.getConnection(getDB_URL(), getUser(),getPASS());
 
 			// Execute a query
 			stmt = conn.createStatement();
@@ -65,5 +65,19 @@ public class DBHelper {
 			}
 			return loginData;
 		}
+	}
+
+	
+	public String getJDBC_DRIVER() {
+		return dbConfigProperties.getProperty("JDBC_DRIVER");
+	}
+	public String getDB_URL() {
+		return dbConfigProperties.getProperty("DB_URL");
+	}
+	public String getUser() {
+		return dbConfigProperties.getProperty("USER");
+	}
+	public String getPASS() {
+		return dbConfigProperties.getProperty("PASS");
 	}
 }
