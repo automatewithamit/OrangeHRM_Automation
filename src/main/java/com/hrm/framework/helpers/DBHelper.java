@@ -20,28 +20,29 @@ public class DBHelper {
 	@SuppressWarnings("finally")
 	public Map<String, String> readLoginTable() {
 		Map<String, String> loginData = new HashMap<String, String>();
+		
 		Connection conn = null;
 		Statement stmt = null;
 
 		try {
-			// Register JDBC driver
+			//1. Register JDBC driver
 			Class.forName(getJDBC_DRIVER());
 
-			// Open a connection
+			//2. Open a connection
 			conn = DriverManager.getConnection(getDB_URL(), getUser(),getPASS());
 
-			// Execute a query
+			//3. Execute a query
 			stmt = conn.createStatement();
 			String sql = "SELECT username, password FROM login";
 			ResultSet rs = stmt.executeQuery(sql);
 
-			// Extract data from result set
+			//4. Extract data from result set
 			while (rs.next()) {
 				String username = rs.getString("username");
 				String password = rs.getString("password");
 				loginData.put("username", username);
 				loginData.put("password", password);
-				System.out.println("Username: " + username + ", Password: " + password);
+				System.out.println("Username from DB: " + username + ", Password from DB: " + password);
 			}
 
 			// Clean-up environment
