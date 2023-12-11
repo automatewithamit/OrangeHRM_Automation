@@ -6,8 +6,8 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.hrm.framework.constants.TestGroups;
-import com.hrm.framework.reporting.Reporter;
+import com.awa.framework.constants.TestGroups;
+import com.awa.framework.reporting.Reporter;
 import com.hrm.pages.DashboardPage;
 import com.hrm.pages.LoginPage;
 

@@ -1,210 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="12" passed="0" failed="3" skipped="0">
+<testng-results ignored="20" total="22" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-23T02:26:22 IST" name="Regression-Suite" finished-at="2023-09-23T02:30:30 IST" duration-ms="247578">
+  <suite started-at="2023-11-08T00:28:40 IST" name="Smoke-Suite" finished-at="2023-11-08T00:28:56 IST" duration-ms="15190">
     <groups>
+      <group name="Leaves">
+        <method signature="LeaveTests.verifyLeaves()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" name="verifyLeaves" class="com.hrm.tests.LeaveTests"/>
+        <method signature="LeaveTests.verifyLeavesGettingRejected()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" name="verifyLeavesGettingRejected" class="com.hrm.tests.LeaveTests"/>
+      </group> <!-- Leaves -->
+      <group name="Regression">
+        <method signature="LeaveTests.verifyLeaves()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" name="verifyLeaves" class="com.hrm.tests.LeaveTests"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="LeaveTests.verifyLeaves()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" name="verifyLeaves" class="com.hrm.tests.LeaveTests"/>
+        <method signature="LeaveTests.verifyLeavesGettingRejected()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" name="verifyLeavesGettingRejected" class="com.hrm.tests.LeaveTests"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-09-23T02:26:22 IST" name="Test1" finished-at="2023-09-23T02:30:30 IST" duration-ms="247578">
+    <test started-at="2023-11-08T00:28:40 IST" name="QA_SmokeTests" finished-at="2023-11-08T00:28:56 IST" duration-ms="15190">
       <class name="com.hrm.tests.DashboardTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:20 IST" name="beforeSuite" finished-at="2023-09-23T02:26:22 IST" duration-ms="2281" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.hrm.tests.DashboardTests@55cff952]" started-at="2023-11-08T00:28:40 IST" name="beforeSuite" finished-at="2023-11-08T00:28:40 IST" duration-ms="294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:22 IST" name="beforeTest" finished-at="2023-09-23T02:26:22 IST" duration-ms="58" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.hrm.tests.DashboardTests@55cff952]" started-at="2023-11-08T00:28:40 IST" name="beforeTest" finished-at="2023-11-08T00:28:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:23 IST" name="beforeMethod" finished-at="2023-09-23T02:28:28 IST" duration-ms="125487" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hrm.tests.DashboardTests.verifyAllWidgetsOnDashboardScreen()]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.hrm.tests.DashboardTests@55cff952]" started-at="2023-11-08T00:28:56 IST" name="afterTest" finished-at="2023-11-08T00:28:56 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:23 IST" name="beforeMethod" finished-at="2023-09-23T02:26:33 IST" duration-ms="10706" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hrm.tests.DashboardTests.verifyQuickLaunchSectionOnDashboardPage()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyQuickLaunchSectionOnDashboardPage()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:33 IST" name="verifyQuickLaunchSectionOnDashboardPage" finished-at="2023-09-23T02:26:39 IST" duration-ms="5701" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Quick Launch Icons are not Matching] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Quick Launch Icons are not Matching] but found [true]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:617)
-at com.hrm.tests.DashboardTests.verifyQuickLaunchSectionOnDashboardPage(DashboardTests.java:64)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyQuickLaunchSectionOnDashboardPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:26:39 IST" name="afterMethod" finished-at="2023-09-23T02:26:39 IST" duration-ms="111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyAllWidgetsOnDashboardScreen()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:28:28 IST" name="verifyAllWidgetsOnDashboardScreen" finished-at="2023-09-23T02:30:30 IST" duration-ms="121748" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[All the Expected Widgets are not available on the Dashboard expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: All the Expected Widgets are not available on the Dashboard expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:819)
-at com.hrm.tests.DashboardTests.verifyAllWidgetsOnDashboardScreen(DashboardTests.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAllWidgetsOnDashboardScreen -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:30:30 IST" name="afterMethod" finished-at="2023-09-23T02:30:30 IST" duration-ms="118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.hrm.tests.DashboardTests@60db1c0e]" started-at="2023-09-23T02:30:30 IST" name="afterSuite" finished-at="2023-09-23T02:30:31 IST" duration-ms="1253" status="PASS">
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.hrm.tests.DashboardTests@55cff952]" started-at="2023-11-08T00:28:56 IST" name="afterSuite" finished-at="2023-11-08T00:28:56 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.hrm.tests.DashboardTests -->
-      <class name="com.hrm.tests.AdminTests">
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.AdminTests@18f8cd79]" started-at="2023-09-23T02:26:23 IST" name="beforeMethod" finished-at="2023-09-23T02:26:48 IST" duration-ms="25302" status="PASS">
+      <class name="com.hrm.tests.LeaveTests">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:40 IST" name="beforeMethod" finished-at="2023-11-08T00:28:50 IST" duration-ms="9501" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.tests.AdminTests.verifyUsersCreationOnAdminPage()]]>
+                <![CDATA[public void com.hrm.tests.LeaveTests.verifyLeavesGettingRejected()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUsersCreationOnAdminPage()[pri:0, instance:com.hrm.tests.AdminTests@18f8cd79]" started-at="2023-09-23T02:26:48 IST" name="verifyUsersCreationOnAdminPage" finished-at="2023-09-23T02:28:20 IST" duration-ms="92554" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='User Role']//following::i/.."}
-  (Session info: chrome=94.0.4606.61)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [80528c13ff6673d613480b165e9fb98e, findElement {using=xpath, value=//label[text()='User Role']//following::i/..}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.CepqNF}, goog:chromeOptions: {debuggerAddress: localhost:44113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://172.18.0.3:5555/sessio..., se:cdpVersion: 94.0.4606.61, se:vnc: ws://172.18.0.3:5555/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 80528c13ff6673d613480b165e9fb98e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='User Role']//following::i/.."}
-  (Session info: chrome=94.0.4606.61)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [80528c13ff6673d613480b165e9fb98e, findElement {using=xpath, value=//label[text()='User Role']//following::i/..}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.CepqNF}, goog:chromeOptions: {debuggerAddress: localhost:44113}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://172.18.0.3:5555/sessio..., se:cdpVersion: 94.0.4606.61, se:vnc: ws://172.18.0.3:5555/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 80528c13ff6673d613480b165e9fb98e
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at com.hrm.webelements.DropDown.click(DropDown.java:21)
-at com.hrm.webelements.DropDown.selectOption(DropDown.java:28)
-at com.hrm.pages.UsersPage.addUser(UsersPage.java:28)
-at com.hrm.tests.AdminTests.verifyUsersCreationOnAdminPage(AdminTests.java:30)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:40 IST" name="beforeMethod" finished-at="2023-11-08T00:28:50 IST" duration-ms="9501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hrm.tests.LeaveTests.verifyLeaves()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUsersCreationOnAdminPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.AdminTests@18f8cd79]" started-at="2023-09-23T02:28:20 IST" name="afterMethod" finished-at="2023-09-23T02:28:21 IST" duration-ms="115" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyLeaves()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:50 IST" name="verifyLeaves" finished-at="2023-11-08T00:28:55 IST" duration-ms="4834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLeaves -->
+        <test-method signature="verifyLeavesGettingRejected()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:50 IST" name="verifyLeavesGettingRejected" finished-at="2023-11-08T00:28:55 IST" duration-ms="4881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLeavesGettingRejected -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:55 IST" name="afterMethod" finished-at="2023-11-08T00:28:56 IST" duration-ms="805" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.hrm.tests.AdminTests -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Regression-Suite -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.hrm.tests.LeaveTests@736f3e9e]" started-at="2023-11-08T00:28:55 IST" name="afterMethod" finished-at="2023-11-08T00:28:56 IST" duration-ms="768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.hrm.tests.LeaveTests -->
+    </test> <!-- QA_SmokeTests -->
+  </suite> <!-- Smoke-Suite -->
 </testng-results>

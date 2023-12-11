@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.hrm.framework.core.BrowserManager;
-import com.hrm.framework.webelements.WebLink;
+import com.awa.framework.core.BrowserManager;
+import com.awa.framework.webelements.WebLink;
 
 public class NavigationMenuPage extends BasePage {
 

@@ -3,15 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hrm.tests.AdminTests">
+      <class name="com.hrm.tests.LoginTests">
         <methods>
-          <include name="verifyUsersCreationOnAdminPage"/>
+          <include name="verifyLoginUsingDB"/>
+          <include name="verifyLogin"/>
+          <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="afterTest"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.hrm.tests.AdminTests -->
+      </class> <!-- com.hrm.tests.LoginTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
